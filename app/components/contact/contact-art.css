@@ -1,0 +1,73 @@
+/* Mascot that peeks out from behind the form card on the contact page.
+   Positioned as a % of the grid width so it scales with the layout:
+   the robot's "wall" edge (~89% of the image) lines up with the card's left edge. */
+
+/* Card sits above the mascot so the robot appears to hold on to its edge */
+.contactpage .form-card{z-index:2}
+
+.contactpage .robot{
+  position:absolute;
+  z-index:1;
+  top:0;
+  left:calc(17.6% + 24px);
+  width:30.8%;
+  pointer-events:none;
+  /* slide only (no opacity here) so the backdrop blur below keeps working */
+  animation:robotIn .9s .25s cubic-bezier(.2,.7,.2,1) backwards;
+}
+
+/* Small soft blur patch around the robot's hand / left edge. Only what sits
+   inside this ellipse is blurred, fading to nothing at its edge, so the
+   robot doesn't look stacked on the info cards. The text stays sharp.
+
+   Sizes are % of the robot image box (it scales with the page):
+   --halo-rx / --halo-ry  = how big the blurred area is (the "radius")
+   --halo-cx / --halo-cy  = where its centre is (0% = left/top, 100% = right/bottom)
+   --halo-solid           = how much of the radius is fully blurred before fading */
+.contactpage .robot-halo{
+  --halo-rx:36%;
+  --halo-ry:38%;
+  --halo-cx:70%;
+  --halo-cy:62%;
+  --halo-solid:55%;
+  position:absolute;
+  inset:0;
+  -webkit-backdrop-filter:blur(5px);
+  backdrop-filter:blur(5px);
+  background:rgba(255,255,255,.4);
+  -webkit-mask-image:radial-gradient(ellipse var(--halo-rx) var(--halo-ry) at var(--halo-cx) var(--halo-cy),#000 var(--halo-solid),transparent 100%);
+  mask-image:radial-gradient(ellipse var(--halo-rx) var(--halo-ry) at var(--halo-cx) var(--halo-cy),#000 var(--halo-solid),transparent 100%);
+  animation:robotFade .9s .25s backwards;
+}
+
+.contactpage .robot-float{
+  position:relative;
+  animation:robotFade .9s .25s backwards,robotBob 6s ease-in-out infinite;
+}
+/* White glow that follows the robot's outline and softens the hard edge */
+.contactpage .robot-img{
+  display:block;
+  width:100%;
+  height:auto;
+  position:relative;
+  filter:drop-shadow(0 0 10px rgba(255,255,255,.95));
+}
+.contactpage .robot-orbit{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.contactpage .robot-shadow{
+  position:absolute;
+  left:43%;
+  top:140%;
+  width:56%;
+  height:9%;
+  border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(40,100,240,.22),transparent 70%);
+  filter:blur(5px);
+  animation:robotFade .9s .25s backwards;
+}
+
+@keyframes robotIn{from{transform:translateX(-40px)}to{transform:none}}
+@keyframes robotFade{from{opacity:0}to{opacity:1}}
+@keyframes robotBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* Not enough room next to the text on smaller screens */
+@media(max-width:1100px){.contactpage .robot{display:none}}
