@@ -378,3 +378,9 @@ footer{border-top:1px solid var(--line);padding:20px 0;margin-top:10px}
  .persona h1,.contactpage h1{font-size:40px}
 }
 @media(max-width:390px){.stats{gap:6px}.stat span{font-size:8px}}
+@media (max-width: 650px) {
+  .about-photo img {
+    object-fit: cover;
+    object-position: center 0%;
+  }
+}
