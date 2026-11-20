@@ -2,7 +2,7 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 
 const interests = [
-  { name: "Gaming", image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=350&q=80" },
+  { name: "Researching", image: "https://images.unsplash.com/photo-1768055105012-4c53791b2877?w=600&auto=format&fit=crop&q=60" },
   { name: "Traveling", image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=350&q=80" },
   { name: "Reading", image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=350&q=80" },
   { name: "Music", image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=350&q=80" },

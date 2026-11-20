@@ -19,7 +19,7 @@ const day = [
   { time: "08:00", title: "Plan & coffee", text: "Review tasks, pick the day's top priorities." },
   { time: "09:30", title: "Deep work", text: "Build features, write APIs, fix bugs." },
   { time: "14:00", title: "Learn & experiment", text: "Try new tools, read docs, side projects." },
-  { time: "20:00", title: "Unwind", text: "Gaming, reading or music to recharge." },
+  { time: "20:00", title: "Unwind", text: "researching, reading or music to recharge." },
 ];
 
 export default function PersonaToolbox() {

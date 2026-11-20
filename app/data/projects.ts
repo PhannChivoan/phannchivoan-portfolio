@@ -35,187 +35,186 @@ const mobile = photo("photo-1512941937669-90a1b58e7e9c");
 
 export const projects: Project[] = [
   {
-    slug: "taskflow",
-    title: "Ecommerce Website",
-    description: "An ecommerce website for customer to browse.",
+    slug: "food-platform",
+    title: "Food Platform",
+    description: "An ecommerce website where customers browse and order food online.",
     summary:
-      "A clean task management system that helps teams plan work, assign tasks and track progress in real time.",
-    // image: photo("photo-1559028012-481c04fa702d"),
-    image: "/Project1/image1.png",
-    alt: "Task management dashboard preview",
+      "A food ordering website that lets customers explore menus, add dishes to a cart and place orders in a few clicks.",
+    image: "/Project4/HomeScreen.png",
+    alt: "Food Platform home screen preview",
     tags: ["React", "Tailwind CSS", "Firebase"],
     role: "Full Stack Developer",
     year: "2025",
     status: "Live",
-    liveUrl: "https://example.com/taskflow",
+    liveUrl: "https://example.com/food-platform",
     repoUrl: "https://github.com/",
     overview:
-      "TaskFlow was built to replace scattered to-do lists with one shared workspace. Teams create boards, break work into tasks and see who is doing what at a glance.",
+      "Food Platform was built to make ordering food simple. Customers browse dishes by category, add their favourites to a cart and place an order, while the owner keeps the menu and orders up to date.",
     modules: [
       {
         title: "Authentication & Accounts",
         description:
-          "Secure sign up and sign in so every team member has their own workspace and role.",
+          "Secure sign up and sign in so every customer has their own profile and order history.",
         image: workspace,
-        points: ["Email and Google sign in", "Role based access", "Profile and settings"],
+        points: ["Email and Google sign in", "Saved profile and address", "Order history"],
       },
       {
-        title: "Boards & Task Management",
+        title: "Menu Browsing",
         description:
-          "Create boards with custom columns and move tasks from idea to done with simple drag and drop.",
+          "A clean storefront where customers explore dishes, search and filter to find what they want.",
+        image: mobile,
+        points: ["Categories and search", "Dish photos and prices", "Mobile friendly layout"],
+      },
+      {
+        title: "Cart & Ordering",
+        description:
+          "Add dishes to a cart, adjust quantities and place an order with a simple checkout.",
         image: dashboard,
-        points: ["Drag and drop columns", "Due dates and priorities", "Labels and filters"],
+        points: ["Persistent cart", "Quantity and notes", "Order confirmation"],
       },
       {
-        title: "Team Collaboration",
+        title: "Order Management",
         description:
-          "Assign work, comment on tasks and see live updates from teammates without refreshing.",
-        image: team,
-        points: ["Real-time sync", "Comments and mentions", "Activity timeline"],
-      },
-      {
-        title: "Reports & Insights",
-        description:
-          "Track how the team is performing with clear charts for progress and workload.",
+          "The owner can manage the menu and follow incoming orders from one place.",
         image: analytics,
-        points: ["Completion charts", "Workload per member", "Weekly summary"],
+        points: ["Add and edit dishes", "Order status updates", "Simple sales overview"],
       },
     ],
     outcome:
-      "A fast, responsive app that made it easy for small teams to stay organised and ship on time.",
+      "A fast, easy to use food ordering experience that works well on both phones and desktops.",
   },
   {
-    slug: "shopsphere",
-    title: "ShopSphere",
-    description: "An e-commerce platform with secure payments and admin panel.",
+    slug: "pos-system",
+    title: "POS System",
+    description: "A point of sale system for managing sales, stock and reports.",
     summary:
-      "A full e-commerce system with product management, a smooth checkout and secure online payments.",
-    image: photo("photo-1556742049-0cfed4f6a45d"),
-    alt: "E-commerce website preview",
-    tags: ["Laravel", "MySQL", "Stripe"],
+      "A point of sale system that helps shops record sales, manage inventory and view daily reports.",
+    image: "/Project2/image1.png",
+    alt: "POS System preview",
+    tags: ["Laravel", "MySQL"],
     role: "Backend Developer",
     year: "2025",
     status: "Live",
-    liveUrl: "https://example.com/shopsphere",
+    liveUrl: "https://example.com/pos-system",
     repoUrl: "https://github.com/",
     overview:
-      "ShopSphere lets customers browse products, fill a cart and pay securely, while store owners manage products, orders and customers from an admin panel.",
+      "The POS System helps small shops run their daily sales. Cashiers scan or select products to make a sale, while the owner manages stock, staff and reports from an admin panel.",
     modules: [
       {
-        title: "Product Catalogue",
+        title: "Sales Counter",
         description:
-          "A fast storefront where customers search, filter and discover products easily.",
+          "A fast checkout screen where cashiers add products, apply discounts and complete a sale.",
+        image: dashboard,
+        points: ["Quick product search", "Discounts and totals", "Multiple payment methods"],
+      },
+      {
+        title: "Products & Inventory",
+        description:
+          "Keep products and stock levels organised so the shop never runs out by surprise.",
+        image: workspace,
+        points: ["Product and category management", "Stock tracking", "Low stock alerts"],
+      },
+      {
+        title: "Receipts & Orders",
+        description:
+          "Every sale is saved and can be printed as a receipt or looked up later.",
+        image: code,
+        points: ["Printable receipts", "Sales history", "Refunds and returns"],
+      },
+      {
+        title: "Sales Reports",
+        description:
+          "Understand how the shop is doing with simple daily and monthly reports.",
+        image: analytics,
+        points: ["Daily and monthly sales", "Best selling products", "Staff activity"],
+      },
+    ],
+    outcome:
+      "A reliable system that replaces paper records and makes daily shop work faster and more accurate.",
+  },
+  {
+    slug: "phone-shop",
+    title: "Phone Shop Ecommerce",
+    description: "An online store for browsing and buying mobile phones.",
+    summary:
+      "An ecommerce website for a phone shop where customers can compare models, view specs and order online.",
+    image: "/Project3/image1.png",
+    alt: "Phone Shop Ecommerce preview",
+    tags: ["React", "Tailwind CSS"],
+    role: "Frontend Developer",
+    year: "2024",
+    status: "Live",
+    liveUrl: "https://example.com/phone-shop",
+    repoUrl: "https://github.com/",
+    overview:
+      "Phone Shop Ecommerce gives customers an easy way to find the right phone. They can browse brands, check specifications, compare models and place an order from any device.",
+    modules: [
+      {
+        title: "Phone Catalogue",
+        description:
+          "Browse phones by brand, price and category with clear photos and key details.",
         image: mobile,
-        points: ["Search and filters", "Categories and tags", "Product galleries"],
+        points: ["Brands and categories", "Search and filters", "Product galleries"],
+      },
+      {
+        title: "Product Details",
+        description:
+          "Each phone has its own page with specifications, colours and storage options.",
+        image: workspace,
+        points: ["Full specifications", "Colour and storage options", "Related phones"],
       },
       {
         title: "Cart & Checkout",
         description:
-          "A simple, secure checkout flow powered by Stripe so customers can pay with confidence.",
-        image: workspace,
-        points: ["Persistent cart", "Stripe payments", "Order confirmation emails"],
-      },
-      {
-        title: "Admin Panel",
-        description:
-          "Store owners manage products, stock, orders and customers from one dashboard.",
+          "A simple cart and checkout so customers can order without any confusion.",
         image: dashboard,
-        points: ["Product and stock management", "Order tracking", "User management"],
-      },
-      {
-        title: "Sales Analytics",
-        description:
-          "Understand what sells with revenue charts and top product reports.",
-        image: analytics,
-        points: ["Revenue overview", "Best sellers", "Monthly reports"],
+        points: ["Persistent cart", "Order form", "Order confirmation"],
       },
     ],
     outcome:
-      "A complete shopping experience from browsing to payment, with a simple back office for the store owner.",
+      "A clean, responsive store that makes it easy for customers to pick and buy a phone.",
   },
   {
-    slug: "weatherwise",
-    title: "WeatherWise",
-    description: "Real-time weather forecast with a clean and simple interface.",
+    slug: "toy-store",
+    title: "Toy Ecommerce Store",
+    description: "A colourful online store for toys and gifts.",
     summary:
-      "A simple weather app that shows live conditions and a 5 day forecast for any city in the world.",
-    image: photo("photo-1504608524841-42fe6f032b4b"),
-    alt: "Weather application preview",
-    tags: ["React", "OpenWeather API"],
-    role: "Frontend Developer",
-    year: "2024",
-    status: "Live",
-    liveUrl: "https://example.com/weatherwise",
-    repoUrl: "https://github.com/",
-    overview:
-      "WeatherWise focuses on doing one thing well: showing the weather clearly. Search a city and instantly see temperature, wind, humidity and the days ahead.",
-    modules: [
-      {
-        title: "City Search",
-        description:
-          "Find the weather for any city in the world with instant suggestions as you type.",
-        image: workspace,
-        points: ["Autocomplete search", "Recent searches", "Current location"],
-      },
-      {
-        title: "Current Conditions",
-        description:
-          "A clear snapshot of temperature, wind, humidity and what the sky looks like right now.",
-        image: dashboard,
-        points: ["Live temperature", "Wind and humidity", "Sunrise and sunset"],
-      },
-      {
-        title: "5 Day Forecast",
-        description:
-          "Plan ahead with a simple forecast that is easy to read at a glance.",
-        image: analytics,
-        points: ["Daily highs and lows", "Rain chances", "Metric and imperial units"],
-      },
-    ],
-    outcome:
-      "A lightweight app that loads fast and is easy to read at a glance.",
-  },
-  {
-    slug: "devblog",
-    title: "DevBlog",
-    description: "A modern blog for developers and technology enthusiasts.",
-    summary:
-      "A fast, markdown powered blog for sharing tutorials, notes and ideas about web development.",
-    image: photo("photo-1498050108023-c5249f4df085"),
-    alt: "Developer blog preview",
-    tags: ["Next.js", "Markdown"],
+      "A fast, friendly ecommerce store where parents can browse toys by age and category and order online.",
+    image: "/Project1/image1.png",
+    alt: "Toy Ecommerce Store preview",
+    tags: ["Next.js", "Tailwind CSS"],
     role: "Full Stack Developer",
     year: "2026",
     status: "In progress",
-    liveUrl: "https://example.com/devblog",
+    liveUrl: "https://example.com/toy-store",
     repoUrl: "https://github.com/",
     overview:
-      "DevBlog is a personal publishing platform where posts are written in markdown and rendered as fast static pages, great for readers and search engines.",
+      "The Toy Ecommerce Store is built to make shopping for toys fun and simple. Parents can find the right toy by age or category, add it to a cart and check out quickly.",
     modules: [
       {
-        title: "Markdown Writing",
+        title: "Toy Catalogue",
         description:
-          "Write posts in plain markdown with syntax highlighted code blocks and images.",
-        image: code,
-        points: ["Code highlighting", "Image support", "Draft and publish"],
+          "Browse toys by age group, category and price with bright, clear product cards.",
+        image: mobile,
+        points: ["Age and category filters", "Search", "Product galleries"],
       },
       {
-        title: "Reading Experience",
+        title: "Shopping Cart",
         description:
-          "A clean, distraction free layout designed for long technical articles.",
+          "Add toys to a cart, change quantities and review everything before paying.",
         image: workspace,
-        points: ["Dark and light modes", "Table of contents", "Reading time"],
+        points: ["Persistent cart", "Quantity controls", "Order summary"],
       },
       {
-        title: "Tags & Discovery",
+        title: "Orders & Admin",
         description:
-          "Help readers find what they need with tags, categories and search.",
+          "Manage toys, stock and incoming orders from a simple admin area.",
         image: dashboard,
-        points: ["Tags and categories", "Search", "Related posts"],
+        points: ["Product management", "Order tracking", "Stock updates"],
       },
     ],
     outcome:
-      "A flexible blog foundation that makes writing and publishing new posts effortless.",
+      "A flexible store foundation that is quick to load and easy to expand with new toys.",
   },
 ];
 

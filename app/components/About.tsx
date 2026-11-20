@@ -14,7 +14,7 @@ export default function About() {
       <div className="container about-grid">
         <Reveal className="about-photo">
           <Image
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=700&q=85"
+            src="/About-Me.png"
             alt="Collaborative technology workspace"
             fill
             sizes="(max-width: 650px) 100vw, 210px"
@@ -29,7 +29,7 @@ export default function About() {
             web applications and exploring new tools and frameworks.
           </p>
           <p>
-            When I&apos;m not coding, you can find me gaming, reading, or
+            When I&apos;m not coding, you can find me researching, reading, or
             traveling to discover new places.
           </p>
           <Link className="mini-link" href="/about">
